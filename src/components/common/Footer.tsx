@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 import AnimateLink from '@/components/base/AnimateLink';
 import { footerLeftItems, footerRightItems } from '@/data/common';
 import { FooterItem } from '@/types/common';
@@ -18,7 +19,12 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col md:flex-row border-x border-x-gray-500">
-          <div className="px-3 lg:px-6 py-4 max-md:border-b border-b-gray-400 md:border-e md:border-e-gray-500 flex flex-wrap gap-4 lg:max-w-138">
+          <div
+            className={twMerge(
+              'px-3 lg:px-6 py-4 max-md:border-b border-b-gray-400 md:border-e',
+              'md:border-e-gray-500 flex flex-wrap gap-4 lg:max-w-138'
+            )}
+          >
             {footerLeftItems.map((item) => (
               <FooterNavLink item={item} key={item.id} />
             ))}

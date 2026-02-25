@@ -166,3 +166,20 @@ body {
 @utility container {
   @apply mx-auto px-4 w-full;
 }
+
+@layer components {
+}
+@utility swiper-theme-container {
+  @layer base {
+    .custom-swiper-pagination {
+      transition: all 0.3s;
+
+      .swiper-pagination-bullet {
+        @apply h-2 w-2 bg-secondary-400 rounded-full;
+      }
+      .swiper-pagination-bullet-active {
+        @apply bg-black;
+      }
+    }
+  }
+}

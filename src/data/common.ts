@@ -1,6 +1,6 @@
 import icon1 from 'assets/images/icons/AdChoices.svg';
 import icon2 from 'assets/images/icons/monitors.png';
-import { FooterItem, SubMenuItem } from '@/types/common';
+import { FooterItem, RegionItem, SubMenuItem } from '@/types/common';
 
 export const footerLeftItems: FooterItem[] = [
   {
@@ -85,60 +85,82 @@ export const subMenuItems: SubMenuItem[] = [
   }
 ];
 
-
 export const headerMenu: SubMenuItem[] = [
   {
     id: 1,
-    label: "Markets",
+    label: 'Markets',
     children: [
-      { id: 201, label: "Stocks", url: "#!" },
-      { id: 202, label: "Commodities", url: "#!" },
-      { id: 203, label: "Currencies", url: "#!" },
-      { id: 204, label: "Bonds", url: "#!" },
-    ],
+      { id: 201, label: 'Stocks', url: '#!' },
+      { id: 202, label: 'Commodities', url: '#!' },
+      { id: 203, label: 'Currencies', url: '#!' },
+      { id: 204, label: 'Bonds', url: '#!' }
+    ]
   },
   {
     id: 2,
-    label: "Economics",
+    label: 'Economics',
     url: '#!'
   },
   {
     id: 3,
-    label: "Industries",
+    label: 'Industries',
     url: '#!'
   },
   {
     id: 4,
-    label: "Tech",
-    url: "#!",
+    label: 'Tech',
+    url: '#!'
   },
   {
     id: 5,
-    label: "Politics",
-    url: "#!",
+    label: 'Politics',
+    url: '#!'
   },
   {
     id: 6,
-    label: "Businessweek",
-    url: "#!",
+    label: 'Businessweek',
+    url: '#!'
   },
   {
     id: 7,
-    label: "Opinion",
-    url: "#!",
+    label: 'Opinion',
+    url: '#!'
   },
   {
     id: 8,
-    label: "Video",
-    url: "#!",
+    label: 'Video',
+    url: '#!'
   },
   {
     id: 9,
-    label: "More",
+    label: 'More',
     children: [
-      { id: 1001, label: "Podcasts", url: "#!" },
-      { id: 1002, label: "Graphics", url: "!" },
-      { id: 1003, label: "Investigations", url: "#!" },
-    ],
+      { id: 1001, label: 'Podcasts', url: '#!' },
+      { id: 1002, label: 'Graphics', url: '!' },
+      { id: 1003, label: 'Investigations', url: '#!' }
+    ]
+  }
+];
+
+export const regionItems: RegionItem[] = [
+  {
+    id: 1,
+    region: 'Asia'
+  },
+  {
+    id: 2,
+    region: 'UK'
+  },
+  {
+    id: 3,
+    region: 'US'
+  },
+  {
+    id: 4,
+    region: 'Canada'
+  },
+  {
+    id: 5,
+    region: 'Middle East'
   }
 ];

@@ -20,3 +20,11 @@ export interface SubMenuItem {
   className?: string;
   children?: SubMenuItem[]
 }
+
+export type RegionKey = 'US' | 'UK' | 'Asia' | 'Middle East' | 'Canada';
+
+export interface RegionItem {
+  id: number;
+  region: RegionKey;
+}
+

@@ -53,9 +53,9 @@ const Button = ({
       large: 'p-4 text-lg rounded-lg'
     },
     circle: {
-      small: 'min-w-9 min-h-9 text-sm rounded-full',
-      medium: 'min-w-11 min-h-11 text-base rounded-full',
-      large: 'min-w-12 min-h-12 text-lg rounded-full'
+      small: 'min-w-7 min-h-7 text-sm rounded-full',
+      medium: 'min-w-9 min-h-9 text-base rounded-full',
+      large: 'min-w-11 min-h-11 text-lg rounded-full'
     }
   };
 
@@ -64,7 +64,7 @@ const Button = ({
       filled:
         'bg-primary-200 text-primary-900 border border-primary-200 hover:bg-primary-400 hover:border-primary-400',
       outlined:
-        'border border-primary-200 text-primary-900 hover:bg-primary-400 hover:border-primary-400',
+        'border border-primary-200 text-primary-900 hover:bg-primary-400 hover:border-primary-400 hover:text-white',
       text: 'border-0 bg-transparent text-primary-900 hover:bg-primary-400'
     },
     secondary: {
