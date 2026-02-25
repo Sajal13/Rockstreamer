@@ -36,7 +36,7 @@ const NavItem = ({ item }: NavItemProps) => {
                 key={child.id}
                 href={child.url || '#!'}
                 className={twMerge(
-                  'text-white text-sm font-semibold py-3 px-4 block hover:bg-primary-200 hover:text-black transition duration-300 cursor-pointer',
+                  'text-white text-sm font-semibold py-3 px-4 block hover:bg-white/10 hover:text-white/90 transition duration-300 cursor-pointer',
                   child.className
                 )}
               >

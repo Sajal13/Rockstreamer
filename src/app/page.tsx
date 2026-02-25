@@ -2,6 +2,7 @@
 import { useTheme } from "next-themes";
 import Loading from "./loading";
 import Footer from "@/components/common/Footer";
+import Region from "@/components/common/Region";
 
 export default function Home() {
   return (

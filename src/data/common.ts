@@ -136,9 +136,9 @@ export const headerMenu: SubMenuItem[] = [
     id: 9,
     label: "More",
     children: [
-      { id: 1001, label: "Podcasts", url: "/podcasts" },
-      { id: 1002, label: "Graphics", url: "/graphics" },
-      { id: 1003, label: "Investigations", url: "/investigations" },
+      { id: 1001, label: "Podcasts", url: "#!" },
+      { id: 1002, label: "Graphics", url: "!" },
+      { id: 1003, label: "Investigations", url: "#!" },
     ],
   }
 ];
