@@ -3,7 +3,7 @@ const Loading = () => {
     <div className="w-screen overflow-hidden drop-shadow-2xl">
       <div className="flex p-8 justify-center items-center h-screen">
         <div className="text-center space-y-6">
-          <div className="w-24 h-24 border-4 border-t-success-500 border-primary-700 rounded-full animate-spin mx-auto"></div>
+          <div className="w-24 h-24 max-w-24 mx-h-24 border-4 border-t-success-500 border-primary-700 rounded-full animate-spin mx-auto"></div>
           <div className="text-success-500 font-semibold text-4xl opacity-90 animate-fadeIn">
             Almost There...
           </div>
