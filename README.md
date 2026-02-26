@@ -8,11 +8,12 @@ A modern news video streaming platform built with **Next.js**, **Tailwind CSS v4
 
 | Technology | Version |
 |------------|---------|
-| [Next.js](https://nextjs.org/) | 16.1.0 |
+| [Next.js](https://nextjs.org/) | 16.1.6 |
 | [Tailwind CSS](https://tailwindcss.com/) | v4 |
-| [Video.js](https://videojs.com/) | Latest |
-| [Swiper](https://swiperjs.com/) | Latest |
-| [TypeScript](https://www.typescriptlang.org/) | Latest |
+| [Video.js](https://videojs.com/) | 8.23.7 |
+| [Swiper](https://swiperjs.com/) | 12.1.2 |
+| [Next-themes](https://www.typescriptlang.org/) | 0.4.6 |
+| [TypeScript](https://www.typescriptlang.org/) | ^5 |
 
 ---
 
@@ -135,6 +136,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 - 🔗 **Copy Link** feature with clipboard API and toast notification
 - 🎠 **Swiper Carousel** with custom pagination and navigation
 - 📱 **Responsive Layout** with dynamic column span based on side panel state
+- 📱 **Light/Dark Mode** with color switching options.
 
 ---
 
