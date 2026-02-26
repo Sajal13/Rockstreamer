@@ -1,3 +1,4 @@
+import Latest from './Latest'
 import MainContent from './MainContent'
 import TodayVideos from './TodayVideos'
 
@@ -8,8 +9,9 @@ const HomeContainer = () => {
         <div className='lg:col-span-2'>
           <MainContent />
         </div>
-        <div className='px-6 py-4'>
+        <div>
           <TodayVideos />
+          <Latest />
         </div>
       </div>
     </section>

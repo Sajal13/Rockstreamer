@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
+@import './video.css';
 
 @theme {
   /* Primary color palette */
@@ -181,5 +182,9 @@ body {
         @apply bg-black;
       }
     }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }

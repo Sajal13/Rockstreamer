@@ -1,0 +1,81 @@
+.video-js {
+  .vjs-control-bar {
+    background-color: --alpha(var(--color-black) / 10%) !important;
+    gap: --spacing(3);
+    align-items: center;
+    height: --spacing(12) !important;
+    @apply px-3 py-4;
+
+    .vjs-volume-panel {
+      .vjs-mute-control {
+        top: -5px;
+      }
+
+      .vjs-volume-control {
+        top: -7px;
+        left: 5px;
+
+        .vjs-volume-bar {
+          .vjs-volume-level {
+            height: 0.3rem;
+            border-radius: 50rem;
+
+            &::before {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .vjs-progress-control {
+      .vjs-progress-holder {
+        height: 0.3rem;
+        border-radius: 50rem;
+
+        .vjs-play-progress {
+          &::before {
+            font-size: 1.1rem;
+            top: -2px;
+          }
+        }
+      }
+    }
+
+    .vjs-playback-rate {
+      .vjs-playback-rate-value {
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+      .vjs-menu {
+        width: 4rem;
+      }
+    }
+
+    .vjs-menu {
+      left: auto;
+      right: 0;
+      li {
+        font-size: 1.1rem;
+        @apply px-3;
+      }
+    }
+
+    .vjs-subs-caps-button {
+      .vjs-menu {
+        width: 10rem;
+      }
+    }
+  }
+
+  .vjs-button {
+    height: --spacing(7) !important;
+    width: --spacing(7) !important;
+    cursor: pointer;
+
+    > .vjs-icon-placeholder:before {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+  }
+}

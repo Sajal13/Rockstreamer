@@ -22,7 +22,7 @@ const Footer = () => {
           <div
             className={twMerge(
               'px-3 lg:px-6 py-4 max-md:border-b border-b-gray-400 md:border-e',
-              'md:border-e-gray-500 flex flex-wrap gap-4 lg:max-w-138'
+              'md:border-e-gray-500 flex flex-wrap gap-4 lg:max-w-120'
             )}
           >
             {footerLeftItems.map((item) => (
@@ -54,7 +54,7 @@ const FooterNavLink = ({ item }: { item: FooterItem }) => {
         <p>{item.label}</p>
         {item.icon && (
           <div className="relative w-3 h-3 overflow-hidden">
-            <Image src={item.icon} alt="icon" fill className="object-contain" />
+            <Image src={item.icon} alt="icon" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain" />
           </div>
         )}
       </div>

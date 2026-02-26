@@ -1,12 +1,12 @@
 'use client';
 
-import { PropsWithChildren, useRef } from 'react';
+import { PropsWithChildren, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import {
   Swiper as ReactSwiper,
   SwiperProps as ReactSwiperProps
 } from 'swiper/react';
-import classNames from 'classnames';
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { twMerge } from 'tailwind-merge';
@@ -24,24 +24,38 @@ const Swiper = ({
   prevButtonClassName,
   paginationClassName,
   className,
-  children
+  children,
+  ...rest
 }: PropsWithChildren<SwiperProps>) => {
-  const paginationClass = twMerge(
-    'custom-swiper-pagination',
-    'absolute',
-    'top-full',
-    'left-1/2',
-    '-translate-x-1/2',
-    'rounded-full',
-    'flex',
-    'justify-center',
-    'items-center',
-    'gap-3',
-    'cursor-pointer',
-    'mt-4',
-    'z-10',
-    paginationClassName
-  );
+  const swiperRef = useRef<SwiperType | null>(null);
+  const paginationRef = useRef<HTMLDivElement | null>(null);
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (!swiperRef.current || !paginationRef.current) return;
+
+    const swiper = swiperRef.current;
+
+    // Fix pagination
+    swiper.params.pagination = {
+      ...(swiper.params.pagination as object),
+      el: paginationRef.current
+    };
+    swiper.pagination.init();
+    swiper.pagination.render();
+    swiper.pagination.update();
+
+    // Fix navigation
+    swiper.params.navigation = {
+      ...(swiper.params.navigation as object),
+      prevEl: prevRef.current,
+      nextEl: nextRef.current
+    };
+    swiper.navigation.init();
+    swiper.navigation.update();
+  }, []);
+
   return (
     <div
       className={twMerge(
@@ -51,43 +65,46 @@ const Swiper = ({
     >
       <ReactSwiper
         loop={true}
-        centeredSlides={true}
         modules={[Autoplay, Pagination, Navigation]}
-        autoplay={{
-          delay: 7000,
-          disableOnInteraction: false
-        }}
+        autoplay={{ delay: 7000, disableOnInteraction: false }}
         grabCursor={true}
-        freeMode={true}
-        navigation={{
-          nextEl: '.swiper-button-next-custom',
-          prevEl: '.swiper-button-prev-custom'
-        }}
+        navigation={true}
         pagination={{
-          el: '.custom-swiper-pagination',
+          el: paginationRef.current,
           clickable: true
         }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        {...rest}
       >
         {children}
       </ReactSwiper>
-      <div className={paginationClass}></div>
+
+      <div
+        ref={paginationRef}
+        className={twMerge(
+          'absolute top-full left-1/2 -translate-x-1/2',
+          'rounded-full flex justify-center items-center gap-3',
+          'cursor-pointer mt-4 z-10 custom-swiper-pagination',
+          paginationClassName
+        )}
+      />
+
       <div className="absolute top-full right-0 flex items-center gap-1 mt-2">
         <Button
+          ref={prevRef}
           variant="outlined"
           shape="circle"
           size="small"
-          className={twMerge(
-            'swiper-button-prev-custom',
-            prevButtonClassName
-          )}
+          className={prevButtonClassName}
         >
           <FaChevronLeft />
         </Button>
         <Button
+          ref={nextRef}
           variant="outlined"
           shape="circle"
           size="small"
-          className={twMerge('swiper-button-next-custom', nextButtonClassName)}
+          className={nextButtonClassName}
         >
           <FaChevronRight />
         </Button>

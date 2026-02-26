@@ -9,10 +9,10 @@ import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Button from '@/components/base/Button';
-import MobileNav from '@/components/common/Navbar/MobileNav';
-import NavItem from '@/components/common/Navbar/NavItem';
-import Region from '@/components/common/Navbar/Region';
-import SubmenuMenuItem from '@/components/common/Navbar/SubmenuMenuItem';
+import MobileNav from '@/components/common/navbar/MobileNav';
+import NavItem from '@/components/common/navbar/NavItem';
+import Region from '@/components/common/navbar/Region';
+import SubmenuMenuItem from '@/components/common/navbar/SubmenuMenuItem';
 import { headerMenu, subMenuItems } from '@/data/common';
 
 const Header = () => {

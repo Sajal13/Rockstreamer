@@ -21,6 +21,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: Type;
   className?: string;
   shape?: Shape;
+  pill?: boolean;
   ref?: Ref<HTMLButtonElement>;
 }
 
@@ -34,6 +35,7 @@ const Button = ({
   shape,
   className,
   children,
+  pill,
   ref,
   ...rest
 }: PropsWithChildren<ButtonProps>) => {
@@ -116,7 +118,8 @@ const Button = ({
     baseClass,
     baseSizeClass,
     variantClasses[color][variant],
-    className
+    className,
+    classNames({ 'rounded-[50rem]': pill })
   );
   return (
     <button type={type} className={buttonClass} ref={ref} {...rest}>

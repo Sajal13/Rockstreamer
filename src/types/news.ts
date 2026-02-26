@@ -10,6 +10,8 @@ export interface NewsItem {
   newsType?: string;
   description?: string;
   className?: string;
+  duration?: string;
+  uploadedDate?: string;
   related?: {
     id: number;
     relatedStr: string;
@@ -22,4 +24,11 @@ export interface TodayItem {
   title: string;
   duration: string;
   image: string;
+}
+
+
+export interface Category {
+  id: number;
+  label: string;
+  value: string
 }

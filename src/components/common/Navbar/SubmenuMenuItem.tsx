@@ -43,7 +43,7 @@ const SubmenuMenuItem = ({ item }: SubmenuMenuItemProps) => {
         <div
           className={twMerge(
             'absolute rounded-md left-0 top-6 z-30 bg-primary-400 shadow-md',
-            'hidden group-hover:block min-w-60 min-h-60',
+            'hidden group-hover:block min-w-60 min-h-20',
             "before:content-[''] before:h-5 before:bg-transparent before:-z-10",
             'before:absolute before:-top-6 before:left-0 before:w-full'
           )}
@@ -55,7 +55,7 @@ const SubmenuMenuItem = ({ item }: SubmenuMenuItemProps) => {
               className={twMerge(
                 'text-white first:rounded-t-md last:rounded-b-md',
                 'text-sm font-semibold py-3 px-4 block',
-                'hover:bg-primary-200 hover:text-black transition',
+                'hover:bg-primary-200 hover:text-black dark:hover:text-white transition',
                 'duration-300 cursor-pointer',
                 child.className
               )}
