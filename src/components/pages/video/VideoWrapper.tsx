@@ -158,7 +158,7 @@ const VideoWrapper = ({ item }: VideoWrapperProps) => {
       <div ref={placeholderRef} />
 
       {isPaused && (
-        <div className="absolute inset-0 z-30 flex flex-col justify-between p-4 rounded-md pointer-events-none">
+        <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 rounded-md pointer-events-none">
           <h2 className="text-white text-base font-semibold drop-shadow-md line-clamp-2">
             {item.title}
           </h2>
